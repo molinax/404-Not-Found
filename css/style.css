@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    /* Colors */
+    --title: #333333;
+    --paragraph: #4F4F4F;
+    --paragraph-white: #FFFFFF;
+    --footer: #BDBDBD;
+    --footer-span: #A5A5A5;
+
+    /* Font family */
+    --inconsolata: 'Inconsolata', monospace;
+    --space-mono: 'Space Mono', monospace;
+
+    /* Sizes */
+    --fs-title-mobile: 3rem;
+    --fs-title-desktop: 4rem;
+    --fs-paragraph-mobile: 1.1rem;
+    --fs-paragraph-desktop: 1.5rem;
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 95%;
+    max-width: 1300px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+.title {
+    color: var(--title);
+    font-family: var(--space-mono);
+    font-size: var(--fs-title-mobile);
+}
+
+.paragraph {
+    color: var(--paragraph);
+    font-family: var(--space-mono);
+    font-size: var(--fs-paragraph-mobile);
+    line-height: 1.8rem;
+}
+
+.btn {
+    color: var(--paragraph-white);
+    font-family: var(--space-mono);
+    font-size: var(--fs-paragraph-mobile);
+    background-color: var(--paragraph);
+    border: none;
+    padding: 1.3rem 1rem;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+/* Page styles */
+header {
+    padding: .6rem 0 0 .3rem;
+}
+
+header h2 {
+    font-family: var(--inconsolata);
+    font-size: var(--fs-paragraph-mobile);
+    text-transform: uppercase; 
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section picture .img-404 {
+    width: 22.25rem;
+    height: 22.25rem;
+}
+
+section article {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+section article h1 {
+    max-width: 38rem;
+}
+
+section article p {
+    max-width: 28rem;
+}
+
+section article .btn-article {
+    width: 13.31rem;
+}
+
+footer {
+    font-family: var(--inconsolata);
+    font-size: .85rem;
+    color: var(--footer);
+    text-align: center;
+}
+
+footer span {
+    color: var(--footer-span);
+}
+
+/* Media queries */
+@media screen and (min-width: 825px) {
+    section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .title {
+        font-size: var(--fs-title-desktop);
+    }
+
+    .paragraph {
+        font-size: var(--fs-paragraph-desktop);
+        line-height: 3rem;
+    }
+
+    header h2 {
+        font-size: var(--fs-paragraph-desktop);
+    }
+    
+    section picture .img-404 {
+        width: 33.6rem;
+        height: 33.6rem;
+    }
+}
